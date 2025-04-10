@@ -1,21 +1,20 @@
 "use client";
 
-import { useAuth, useWallet } from "@crossmint/client-sdk-react-ui";
 import Image from "next/image";
 import { WalletBalance } from "@/components/balance";
 import { TransferFunds } from "@/components/transfer";
 import { DelegatedSigner } from "@/components/delegated-signer";
 import { LogoutButton } from "@/components/logout";
 import { LoginButton } from "@/components/login";
+import { usePrivyConnector } from "@/hooks/usePrivyConnector";
 
 export function HomeContent() {
-  const { wallet, status: walletStatus } = useWallet();
-  const { status, status: authStatus } = useAuth();
+  const { crossmintWallet, crossmintWalletStatus, isLoading } =
+    usePrivyConnector();
 
-  const walletAddress = wallet?.getAddress();
-  const isLoggedIn = wallet != null && status === "logged-in";
-  const isLoading =
-    walletStatus === "in-progress" || authStatus === "initializing";
+  const walletAddress = crossmintWallet?.getAddress();
+  const isLoggedIn =
+    crossmintWallet != null && crossmintWalletStatus === "loaded";
 
   if (isLoading) {
     return (
@@ -35,7 +34,9 @@ export function HomeContent() {
           width={150}
           height={150}
         />
-        <h1 className="text-xl font-medium">todo: update</h1>
+        <h1 className="text-xl font-medium">
+          Privy Crossmint Solana Quickstart
+        </h1>
         <div className="max-w-md mt-3 w-full min-h-[38px]">
           <LoginButton />
         </div>
@@ -54,7 +55,9 @@ export function HomeContent() {
           height={150}
           className="mb-4"
         />
-        <h1 className="text-2xl font-semibold mb-2">todo: update</h1>
+        <h1 className="text-2xl font-semibold mb-2">
+          Privy Crossmint Solana Quickstart
+        </h1>
         <p className="text-gray-600 text-sm">
           The easiest way to build onchain
         </p>

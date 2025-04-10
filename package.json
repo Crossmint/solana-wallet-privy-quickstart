@@ -1,5 +1,5 @@
 {
-  "name": "crossmint-demo-template",
+  "name": "solana-wallet-privy-quickstart",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "@crossmint/client-sdk-react-ui": "^1.17.0",
     "@crossmint/client-sdk-window": "^0.2.3",
+    "@privy-io/react-auth": "^2.8.3",
     "@solana/spl-token": "^0.4.13",
     "@solana/web3.js": "^1.98.0",
     "@vercel/analytics": "^1.5.0",

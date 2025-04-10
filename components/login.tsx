@@ -1,9 +1,9 @@
 "use client";
 
-import { useAuth } from "@crossmint/client-sdk-react-ui";
+import { usePrivy } from "@privy-io/react-auth";
 
 export function LoginButton() {
-  const { login } = useAuth();
+  const { login } = usePrivy();
 
   return (
     <button

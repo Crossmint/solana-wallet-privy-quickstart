@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@crossmint/client-sdk-react-ui": "^1.17.5",
-    "@crossmint/client-sdk-window": "^0.2.3",
     "@privy-io/react-auth": "^2.8.3",
     "@solana/spl-token": "^0.4.13",
     "@solana/web3.js": "^1.98.0",

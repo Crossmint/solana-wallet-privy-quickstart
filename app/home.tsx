@@ -12,7 +12,7 @@ export function HomeContent() {
   const { crossmintWallet, crossmintWalletStatus, isLoading } =
     usePrivyConnector();
 
-  const walletAddress = crossmintWallet?.getAddress();
+  const walletAddress = crossmintWallet?.address;
   const isLoggedIn =
     crossmintWallet != null && crossmintWalletStatus === "loaded";
 
@@ -35,7 +35,7 @@ export function HomeContent() {
           height={150}
         />
         <h1 className="text-xl font-medium">
-          Privy Crossmint Solana Quickstart
+          Solana Wallets Quickstart (Privy)
         </h1>
         <div className="max-w-md mt-3 w-full min-h-[38px]">
           <LoginButton />
@@ -56,7 +56,7 @@ export function HomeContent() {
           className="mb-4"
         />
         <h1 className="text-2xl font-semibold mb-2">
-          Privy Crossmint Solana Quickstart
+          Solana Wallets Quickstart (Privy)
         </h1>
         <p className="text-gray-600 text-sm">
           The easiest way to build onchain
@@ -69,7 +69,7 @@ export function HomeContent() {
             <div>
               <h2 className="text-lg font-medium">Your wallet</h2>
               <div className="flex items-center gap-2">
-                <p className="text-[15px] text-gray-500 truncate">
+                <p className="text-[15px] text-gray-500">
                   {walletAddress
                     ? `${walletAddress.slice(0, 4)}...${walletAddress.slice(
                         -4
@@ -84,12 +84,7 @@ export function HomeContent() {
                         document.activeElement as HTMLButtonElement;
                       button.disabled = true;
                       const originalContent = button.innerHTML;
-                      button.innerHTML = `<Image
-                        src="/check.svg"
-                        alt="Check"
-                        width={18}
-                        height={18}
-                      />`;
+                      button.innerHTML = `<img src="/check.svg" alt="Check" width="16" height="16" />`;
                       setTimeout(() => {
                         button.innerHTML = originalContent;
                         button.disabled = false;

@@ -1,5 +1,5 @@
 {
-  "name": "solana-wallet-privy-quickstart",
+  "name": "solana-wallets-privy-quickstart",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@crossmint/client-sdk-react-ui": "^1.17.0",
+    "@crossmint/client-sdk-react-ui": "^1.17.5",
     "@crossmint/client-sdk-window": "^0.2.3",
     "@privy-io/react-auth": "^2.8.3",
     "@solana/spl-token": "^0.4.13",

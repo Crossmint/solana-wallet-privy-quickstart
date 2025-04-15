@@ -16,7 +16,7 @@
 </div>
 
 ## Introduction
-This quickstart demonstrates how to build and manage Crossmint wallets on the Solana blockchain. It leverages Privy Auth Embedded wallets as the authentication layer, allowing these wallets to function as signers for your Crossmint wallet operations.
+This quickstart shows you how to create and manage Crossmint wallets on the Solana blockchain, using Privy to handle user authentication.
 
 **Learn how to:**
 - Create a wallet

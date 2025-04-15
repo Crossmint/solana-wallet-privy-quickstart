@@ -16,7 +16,7 @@
 </div>
 
 ## Introduction
-This quickstart shows you how to create and manage Crossmint wallets on the Solana blockchain, using Privy to handle user authentication.
+This quickstart shows you how to create and manage Crossmint wallets on Solana, using Privy to handle user authentication.
 
 **Learn how to:**
 - Create a wallet
